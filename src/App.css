@@ -1,38 +1,168 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jomhuria&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cardo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap');
+
+body{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100%;
+  background: rgb(251,198,208);
+  background: linear-gradient(165deg, rgb(252, 201, 210) 0%, rgba(194,209,229,1) 64%, rgba(61,155,228,1) 100%);
+}
+
+nav{
+  margin: 0;
+  height: 10vh;
+}
+
+nav .nav-links{
+  display: flex;
+  flex-direction: row;
+  background: #1378C7;
+  margin: 0;
+  padding: 0 5rem;
+  height: 100%;
+  list-style: none;
+  
+}
+
+.nav-links li{
+  font-size: 1.5rem;
+  align-items: center;
+  font-family: 'Sigmar One', cursive;
+
+}
+
+.nav-links .user{
+  margin: auto 0 auto auto;
+  color: #fff;
+  text-decoration: none;
+  font-family: 'Righteous', cursive;
+  cursor: pointer;
+} 
+
+
+
+main{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+  width: 100%;
+}
+
+main .greeting{
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  height: 100%;
+  text-align: center;
+  justify-content: center;
+  position: absolute;
+  transform: translateX(-10%);
+  transform: translateY(-50%);
+  top: 50%;
+  left: 10%;
+  font-family: 'Overpass', sans-serif;
+}
+
+main .greeting h1{
+  margin: .2rem;
+
+
+}
+
+.greeting h1.hey{
+  font-size: 80px;
+  color: #fff;
+  text-align: center;
+  animation: glow 1s ease-in-out infinite alternate;
+  margin-bottom: 1rem;
+  font-family: 'Jomhuria', cursive;
+
+}
+
+main .hero{
+  width: 70%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+}
+
+main .hero .rabbit{
+  object-fit: contain;
+  max-height: 600px;
+  height: 50%;
+  width: auto;
+  position: absolute;
+  left: 55%;
+  bottom: 30%;
+  z-index: 2;
+}
+
+
+
+.hero .circle{
+  width: 23%;
+  padding-top: 23%;
+  position: absolute;
+  border-radius: 50%;
+  background: #FE793D;
+  margin-left: auto;
+  margin-right: 2rem;
+  z-index: 1;
+  top: 45%;
+  left: 65%;
+}
+
+.title {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+ .link {
+   color: #fff;
+   text-decoration: none;
+   font-family: 'Righteous', cursive;
+   margin: auto 5rem;
+   cursor: pointer;
+   z-index: 10;
+ }
+
+main .hero .dog{
+  object-fit: contain;
+  position: absolute;
+  max-height: 300px;
+  height: 25%;
+  width: auto;
+  left: 50%;
+  bottom: 20%;
+  z-index: 3;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+main .hero .dog{
+  height: 25%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.about {
+  text-align: center;
+  padding-top: 40vh;
+  font-family: 'Cardo', serif;
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
+
+
+
+@keyframes glow {
   from {
-    transform: rotate(0deg);
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
   }
   to {
-    transform: rotate(360deg);
+      text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
   }
 }
